@@ -601,10 +601,34 @@
     background: var(--ink);
   }
 
+  .quote-photo {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    margin: 0 auto 1.25rem;
+    border: 2px solid rgba(255,255,255,0.15);
+    filter: grayscale(30%);
+  }
+
+  .quote-photo {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    margin: 0 0 1.25rem 0;
+    border: 2px solid rgba(255,255,255,0.15);
+    filter: grayscale(20%);
+  }
+
   .quote-text {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 300;
     color: rgba(255,255,255,0.85);
     line-height: 1.55;
@@ -804,20 +828,16 @@
 
   .vip-card:hover { background: white; }
 
-  .vip-avatar {
-    width: 4rem;
-    height: 4rem;
+  .vip-photo {
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
-    background: var(--ink);
-    color: white;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
     margin: 0 auto 1rem;
-    letter-spacing: 0.05em;
+    filter: grayscale(20%);
+    border: 2px solid var(--border);
   }
 
   .vip-name {
@@ -840,6 +860,81 @@
 
   @media (max-width: 400px) {
     .vip-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── FAQ ── */
+  #faq { background: white; }
+
+  .faq-header {
+    margin-bottom: 3rem;
+  }
+
+  .faq-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--border);
+  }
+
+  .faq-item {
+    background: white;
+    padding: 1.75rem 2rem;
+    transition: background 0.25s;
+  }
+
+  .faq-item:hover { background: var(--cream); }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0 0 0.75rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--ink);
+    transition: color 0.2s;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .faq-question:hover { color: var(--accent); }
+
+  .faq-icon {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--accent);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    line-height: 1;
+  }
+
+  .faq-icon.open { transform: rotate(45deg); }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+
+  .faq-answer.open {
+    max-height: 300px;
+    padding-top: 1rem;
+  }
+
+  .faq-answer p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--mid);
+  }
+
+  @media (max-width: 700px) {
+    .faq-list { grid-template-columns: 1fr; }
   }
 
   /* ── CLOSING CTA ── */
@@ -997,8 +1092,8 @@
     </div>
     <div class="stat-divider"></div>
     <div class="stat-card">
-      <div class="stat-number" style="font-size: clamp(1.6rem, 3vw, 2rem);">100M+ Players</div>
-      <div class="stat-label">reached through the games, products and marketplaces Amy Jo has co-designed</div>
+      <div class="stat-number" style="font-size: clamp(1.6rem, 3vw, 2rem);">with Amy Jo Kim</div>
+      <div class="stat-label">Co-designer of games, products & marketplaces that reached 100M+ players</div>
     </div>
   </div>
 </div>
@@ -1008,7 +1103,7 @@
   <div class="container">
     <div class="section-header reveal">
       <div>
-        <h3>What Makes This Different</h3>
+        <h3>Why This Matters</h3>
         <h2>The higher you rise, the harder it is to find people who'll tell you the truth.</h2>
         <p style="margin-top: 1rem; color: var(--mid);">Most leadership programs give you frameworks and send you home. We invite you into a room filled with talented peers who understand the terrain, challenge your thinking, and actively support your success.</p>
       </div>
@@ -1030,14 +1125,14 @@
           <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
         </svg>
         <h4>Small, curated & high-trust</h4>
-        <p>Every group is 6–10 people — carefully selected for stage, domain, and fit. Small enough that everyone knows your situation. Diverse enough for genuine perspective. No one selling anything to anyone else.</p>
+        <p>Every group is 6–10 people — carefully selected for stage, domain, and fit. Small enough that everyone knows your situation. Diverse enough for genuine perspective. No one <em>is</em> selling anything to anyone else.</p>
       </div>
       <div class="pillar">
         <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         <h4>Weekly rhythm that compounds</h4>
-        <p>Showing up every week keeps your challenges fresh and your thinking sharp. You bring a real decision, get real feedback, and return the following week having acted on it. That cadence builds accountability no quarterly program can replicate.</p>
+        <p>Showing up every week keeps your challenges fresh and your thinking sharp. You bring a real decision, get real feedback, and return the following week having acted on it. That cadence builds accountability <em>that</em> no quarterly program can replicate.</p>
       </div>
       <div class="pillar">
         <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -1055,14 +1150,17 @@
   <div class="container">
     <div class="quote-inner">
       <div class="quote-block reveal">
-        <p class="quote-text">"This program made me a better, more strategic product maker."</p>
-        <p class="quote-attr"><strong>Ian Brand</strong> · Product Innovation @ General Motors</p>
+        <img src="kacie-hsu.jpeg" alt="Kacie Hsu" class="quote-photo">
+        <p class="quote-text">"This program changed how we design; it delivers powerful insights fast."</p>
+        <p class="quote-attr"><strong>Kacie Hsu</strong> · Senior Research Manager, EA</p>
       </div>
       <div class="quote-block reveal">
-        <p class="quote-text">"Amy Jo's program & insights gave me practical, tangible design skills."</p>
-        <p class="quote-attr"><strong>Gina Bianchini</strong> · CEO, Mighty Networks</p>
+        <img src="blair-ethington.jpeg" alt="Blair Ethington" class="quote-photo">
+        <p class="quote-text">"Amy Jo has a refined, effective process for bringing new ideas to life."</p>
+        <p class="quote-attr"><strong>Blair Ethington</strong> · VP @ eBay</p>
       </div>
       <div class="quote-block reveal">
+        <img src="robin-allenson.jpeg" alt="Robin Allenson" class="quote-photo">
         <p class="quote-text">"I was amazed at how quickly we found our ideal target customers. This stuff works."</p>
         <p class="quote-attr"><strong>Robin Allenson</strong> · CEO, Similar.ai</p>
       </div>
@@ -1112,7 +1210,7 @@
 <section id="programs">
   <div class="container">
     <div class="programs-intro reveal">
-      <h3>Two Masterminds</h3>
+      <h3>How This Works</h3>
       <h2>Two masterminds. One standard.</h2>
       <p>Each group is curated for a specific domain and leadership context. Same weekly format, same high-trust culture, same Game Thinking methodology.</p>
     </div>
@@ -1183,17 +1281,26 @@
         <p>In the mastermind, Amy Jo isn't a teacher. She's a co-thinker, a provocateur, and a pattern-matcher who has seen what works — and what fails — across hundreds of products and dozens of categories. She'll challenge your assumptions, sharpen your thinking, and occasionally tell you something no one else has been willing to say.</p>
 
         <div style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
-          <div>
-            <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--ink); line-height: 1.55;">"Game Thinking is your instruction manual. You've got to find your own window of opportunity."</p>
-            <p style="font-size: 0.82rem; color: var(--mid); margin-top: 0.5rem; font-style: normal;">Garry Tan · CEO, Y Combinator</p>
+          <div style="display: flex; align-items: flex-start; gap: 1rem;">
+            <img src="garry-tan.jpeg" alt="Garry Tan" style="width:3rem;height:3rem;border-radius:50%;object-fit:cover;object-position:center top;flex-shrink:0;filter:grayscale(20%);border:1px solid var(--border);">
+            <div>
+              <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--ink); line-height: 1.55;">"Game Thinking is your instruction manual. You've got to find your own window of opportunity."</p>
+              <p style="font-size: 0.82rem; color: var(--mid); margin-top: 0.5rem; font-style: normal;">Garry Tan · CEO, Y Combinator</p>
+            </div>
           </div>
-          <div>
-            <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--ink); line-height: 1.55;">"Working with Amy Jo is like having a world-class product designer in your pocket."</p>
-            <p style="font-size: 0.82rem; color: var(--mid); margin-top: 0.5rem; font-style: normal;">Eugenia Kuyda · CEO, Replika.ai</p>
+          <div style="display: flex; align-items: flex-start; gap: 1rem;">
+            <img src="Eugenia-Kuyda-.png" alt="Eugenia Kuyda" style="width:3rem;height:3rem;border-radius:50%;object-fit:cover;object-position:center top;flex-shrink:0;filter:grayscale(20%);border:1px solid var(--border);">
+            <div>
+              <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--ink); line-height: 1.55;">"Working with Amy Jo is like having a world-class product designer in your pocket."</p>
+              <p style="font-size: 0.82rem; color: var(--mid); margin-top: 0.5rem; font-style: normal;">Eugenia Kuyda · CEO, WABI</p>
+            </div>
           </div>
-          <div>
-            <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--ink); line-height: 1.55;">"Want to use Jobs-To-Be-Done to build the right product? You're in good hands with Amy Jo."</p>
-            <p style="font-size: 0.82rem; color: var(--mid); margin-top: 0.5rem; font-style: normal;">Bob Moesta · Founder, ReWired Group</p>
+          <div style="display: flex; align-items: flex-start; gap: 1rem;">
+            <img src="bob-moesta.jpeg" alt="Bob Moesta" style="width:3rem;height:3rem;border-radius:50%;object-fit:cover;object-position:center top;flex-shrink:0;filter:grayscale(20%);border:1px solid var(--border);">
+            <div>
+              <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--ink); line-height: 1.55;">"Want to use Jobs-To-Be-Done to build the right product? You're in good hands with Amy Jo."</p>
+              <p style="font-size: 0.82rem; color: var(--mid); margin-top: 0.5rem; font-style: normal;">Bob Moesta · Founder, ReWired Group</p>
+            </div>
           </div>
         </div>
       </div>
@@ -1206,53 +1313,53 @@
   <div class="container">
     <div class="reveal" style="text-align: center; max-width: 60ch; margin: 0 auto 4rem;">
       <h3>Monthly VIP Guests</h3>
-      <h2>Network with world-class product leaders.</h2>
+      <h2>Connect with world-class AI leaders.</h2>
       <p style="margin-top: 1rem; color: var(--mid);">Every month, a hand-picked industry leader joins the mastermind for an intimate conversation — sharing insights, answering your questions, and expanding your network in ways no conference can replicate.</p>
     </div>
 
     <div class="vip-grid reveal">
       <div class="vip-card">
-        <div class="vip-avatar">DH</div>
+        <img src="Doug-Hofstadter-SQUARE-2.png" alt="Doug Hofstadter" class="vip-photo">
         <div class="vip-name">Doug Hofstadter</div>
         <div class="vip-title">Author · Gödel, Escher, Bach</div>
       </div>
       <div class="vip-card">
-        <div class="vip-avatar">EK</div>
+        <img src="Eugenia-Kuyda-.png" alt="Eugenia Kuyda" class="vip-photo">
         <div class="vip-name">Eugenia Kuyda</div>
         <div class="vip-title">CEO · WABI</div>
       </div>
       <div class="vip-card">
-        <div class="vip-avatar">HK</div>
+        <img src="hansohl-kim.jpeg" alt="Hansohl Kim" class="vip-photo">
         <div class="vip-name">Hansohl Kim</div>
         <div class="vip-title">Anthropic</div>
       </div>
       <div class="vip-card">
-        <div class="vip-avatar">BM</div>
+        <img src="bob-moesta.jpeg" alt="Bob Moesta" class="vip-photo">
         <div class="vip-name">Bob Moesta</div>
         <div class="vip-title">Founder · ReWired Group</div>
       </div>
       <div class="vip-card">
-        <div class="vip-avatar">KK</div>
+        <img src="kevin-kelly.jpeg" alt="Kevin Kelly" class="vip-photo">
         <div class="vip-name">Kevin Kelly</div>
         <div class="vip-title">Co-founder · WIRED Magazine</div>
       </div>
       <div class="vip-card">
-        <div class="vip-avatar">GT</div>
+        <img src="garry-tan.jpeg" alt="Garry Tan" class="vip-photo">
         <div class="vip-name">Garry Tan</div>
         <div class="vip-title">CEO · Y Combinator</div>
       </div>
       <div class="vip-card">
-        <div class="vip-avatar">GB</div>
+        <img src="gina-bianchini.png" alt="Gina Bianchini" class="vip-photo">
         <div class="vip-name">Gina Bianchini</div>
         <div class="vip-title">CEO · Mighty Networks</div>
       </div>
       <div class="vip-card">
-        <div class="vip-avatar">LB</div>
+        <img src="laura-burkhauser.jpeg" alt="Laura Burkhauser" class="vip-photo">
         <div class="vip-name">Laura Burkhauser</div>
         <div class="vip-title">CEO · Descript</div>
       </div>
       <div class="vip-card">
-        <div class="vip-avatar">AB</div>
+        <img src="amy-bucher.jpeg" alt="Amy Bucher" class="vip-photo">
         <div class="vip-name">Amy Bucher, Ph.D.</div>
         <div class="vip-title">CBO · Lirio</div>
       </div>
@@ -1266,8 +1373,121 @@
 <section id="how">
   <div class="container">
     <div class="investment-note reveal">
-      <p>Investment: <strong>$5,000–$15,000 / year</strong> depending on program and cohort. Every applicant has a discovery call first — we select for fit, not just credentials.</p>
+      <p>Investment: <strong>$10,000/year</strong> for leaders at established companies · <strong>$6,000/year</strong> for self-funded founders & solopreneurs. Monthly and quarterly payment plans available. Every applicant starts with a discovery call — we select for fit, not just credentials.</p>
       <a href="https://calendly.com/amyjokim/insider" class="btn-primary" target="_blank">Book Your Discovery Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-header reveal">
+      <h3>FAQ</h3>
+      <h2>Common questions.</h2>
+    </div>
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What is the Builder's Edge Mastermind?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>A small-group program for tech founders and senior product leaders who want to hone their product sense, make sharper decisions, and build a trusted peer network — all through a game designer's lens on leadership and retention.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          When does the Mastermind start?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>We are currently accepting applications for Q2 2026. Spots are limited and filled by application — book a discovery call to get the process started.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How often do you meet? Do you take breaks?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>We meet weekly most weeks, with breaks for vacations and holidays. This ensures you never wait long for problem-solving support when you need it most.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do I have to meet weekly, or can I drop in less often?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Some members meet most weeks; others drop in 1–2 times per month. Both work — the program is designed to be flexible so it fits into a busy leadership schedule.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Where do sessions take place?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Everything runs online, so you can participate from anywhere. Our groups are intentionally international — past and current members join from the US, Switzerland, Dubai, India, Poland, Germany, Sweden, and beyond.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Is this a good fit for me?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>If you want to sharpen your product leadership skills, build a network of talented peers, and make smarter decisions with the support of a trusted group — this is for you. Our members are startup founders, design leaders, and product executives who are all navigating the challenges of leading AI-driven product teams.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Who participates in the Mastermind?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Groups include startup founders, design leaders, and product executives. The common thread is that everyone is leading — or building — AI-driven product teams, and wants to do it better. We select carefully so the people in the room are genuinely your peers.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How much does it cost?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>The Mastermind is <strong>$10,000/year</strong> for leaders at established companies, and <strong>$6,000/year</strong> for self-funded founders and solopreneurs. We also offer monthly and quarterly payment plans for approved members. Many participants expense this through their company's professional development or leadership budget.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do you offer payment plans?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes — we offer monthly and quarterly payment plans for approved Mastermind members. Discuss the options that work best for you during your discovery call.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Is this a course or a mastermind?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>It's a mastermind — not a course. There's no curriculum, no homework, no pre-recorded videos. What you bring to each session is your real work and real decisions. The learning happens through peer conversation, direct feedback, and Amy Jo's facilitation.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1295,6 +1515,21 @@
 </footer>
 
 <script>
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const icon = btn.querySelector('.faq-icon');
+    const isOpen = answer.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('open'));
+    // Open clicked if it was closed
+    if (!isOpen) {
+      answer.classList.add('open');
+      icon.classList.add('open');
+    }
+  }
+
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
