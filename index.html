@@ -121,7 +121,7 @@
   /* ── VIDEO HERO ── */
   #hero {
     position: relative;
-    min-height: 100vh;
+    height: min(100vh, 680px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,7 +151,7 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    padding: 8rem clamp(1.5rem, 5vw, 4rem) 6rem;
+    padding: 4rem clamp(1.5rem, 5vw, 4rem) 3rem;
     max-width: 900px;
     margin: 0 auto;
     animation: fadeUp 1s ease both;
@@ -1098,7 +1098,9 @@
         <p style="margin-top: 1rem; color: var(--mid);">Most leadership programs give you frameworks and send you home. We put you in a room with talented peers who understand your terrain, challenge your thinking, and have skin in your success.</p>
       </div>
       <div class="diff-gif-wrap">
-        <img src="Makers_Alliance_members_GIF_5_seven_sec_no_vidya_600px.gif" alt="Builder's Edge members" class="who-gif">
+        <video class="who-gif" autoplay loop muted playsinline>
+          <source src="Makers_Alliance_members_GIF_5_seven_sec_no_vidya_600px.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
 
@@ -1140,9 +1142,9 @@
   <div class="container">
     <div class="quote-inner">
       <div class="quote-block reveal">
-        <img src="Eugenia-Kuyda-.png" alt="Eugenia Kuyda" class="quote-photo">
-        <p class="quote-text">"Working with Amy Jo is like having a world-class product designer in your pocket."</p>
-        <p class="quote-attr"><strong>Eugenia Kuyda</strong> · CEO, WABI</p>
+        <img src="kacie-hsu.jpeg" alt="Kacie Hsu" class="quote-photo">
+        <p class="quote-text">"This approach changed how we design; it delivers powerful insights fast."</p>
+        <p class="quote-attr"><strong>Kacie Hsu</strong> · Senior Research Lead, EA</p>
       </div>
       <div class="quote-block reveal">
         <img src="blair-ethington.jpeg" alt="Blair Ethington" class="quote-photo">
@@ -1168,7 +1170,9 @@
         <p style="margin-top: 1rem;">We support ambitious leaders with organizational responsibility who are building with AI — tech founders, business owners, and senior product leaders.</p>
       </div>
       <div class="who-gif-wrap">
-        <img src="Makers_Club_members_and_VIP_guests_2025_GIF.gif" alt="Builder's Edge members and VIP guests" class="who-gif">
+        <video class="who-gif" autoplay loop muted playsinline>
+          <source src="Makers_Club_members_and_VIP_guests_2025_GIF.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
 
@@ -1226,17 +1230,17 @@
         <p class="program-for">For digital health founders and product leaders</p>
         <p class="program-desc">Digital health is a complex, high-potential tech sector that's underserved when it comes to peer support. Regulatory constraints, clinical workflows, patient outcomes, commercial pressures — we get it.</p>
         <ul class="program-features">
-          <li>Building products that create genuine behavior change</li>
-          <li>Navigating clinical, regulatory, and commercial complexity</li>
-          <li>Finding and learning from the right early customers in health</li>
-          <li>Strategic positioning in a crowded, fast-moving sector</li>
+          <li>Building products that drive behavior change</li>
+          <li>Navigating clinical, regulatory, &amp; commercial complexity</li>
+          <li>Finding &amp; learning from the right early customers</li>
+          <li>Strategic positioning in a fast-moving sector</li>
         </ul>
         <div class="program-accent"></div>
       </div>
     </div>
 
     <div style="text-align: center; margin-top: 3rem;">
-      <a href="https://calendly.com/amyjokim/insider" class="btn-primary" target="_blank">Book Your Discovery Call</a>
+      <a href="https://form.typeform.com/to/Lt4APDrd" class="btn-primary" target="_blank">Apply Now →</a>
     </div>
   </div>
 </section>
@@ -1252,13 +1256,16 @@
         <div class="coach-name">Amy Jo Kim, Ph.D.</div>
         <div class="coach-title">Game Designer & Startup Coach</div>
         <div class="coach-credentials">
+          <span class="cred-tag">Ultima Online</span>
           <span class="cred-tag">The Sims</span>
           <span class="cred-tag">Rock Band</span>
+          <span class="cred-tag">Covet Fashion</span>
           <span class="cred-tag">Netflix</span>
-          <span class="cred-tag">Google</span>
-          <span class="cred-tag">Replika</span>
           <span class="cred-tag">Disney</span>
+          <span class="cred-tag">Google</span>
+          <span class="cred-tag">New York Times</span>
           <span class="cred-tag">Tesla</span>
+          <span class="cred-tag">Replika</span>
           <span class="cred-tag">Apollo Neuro</span>
         </div>
       </div>
@@ -1269,19 +1276,26 @@
         <p>Amy Jo Kim is a game designer and product strategist whose work has reached 100M+ people — including The Sims, Ultima Online, Rock Band, and Covet Fashion. She's worked alongside founders and product teams at Netflix, Disney, Google, Tesla, Replika, and Apollo Neuro, and created the Game Thinking methodology — a framework that distills the best practices of game design into a step-by-step system for building high-retention products.</p>
         <p>In the mastermind, Amy Jo isn't a teacher. She's a co-thinker and pattern-matcher who has seen what works — and what fails — across hundreds of products and dozens of categories. She'll challenge your assumptions and sharpen your thinking.</p>
 
-        <div style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
-          <div style="display: flex; align-items: flex-start; gap: 1rem;">
+        <div style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
             <img src="garry-tan.jpeg" alt="Garry Tan" style="width:5rem;height:5rem;border-radius:8px;object-fit:cover;object-position:center top;flex-shrink:0;filter:grayscale(20%);border:1px solid var(--border);">
             <div>
-              <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--ink); line-height: 1.55;">"Game Thinking is your instruction manual. You've got to find your own window of opportunity."</p>
-              <p style="font-size: 0.82rem; color: var(--mid); margin-top: 0.5rem; font-style: normal;">Garry Tan · CEO, Y Combinator</p>
+              <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.95rem; color: var(--ink); line-height: 1.4;">"Game Thinking is your instruction manual. You've got to find your own window of opportunity."</p>
+              <p style="font-size: 0.78rem; color: var(--mid); margin-top: 0.15rem; font-style: normal;">Garry Tan · CEO, Y Combinator</p>
             </div>
           </div>
-          <div style="display: flex; align-items: flex-start; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
             <img src="bob-moesta.jpeg" alt="Bob Moesta" style="width:5rem;height:5rem;border-radius:8px;object-fit:cover;object-position:center top;flex-shrink:0;filter:grayscale(20%);border:1px solid var(--border);">
             <div>
-              <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--ink); line-height: 1.55;">"Want to use Jobs-To-Be-Done to build the right product? You're in good hands with Amy Jo."</p>
-              <p style="font-size: 0.82rem; color: var(--mid); margin-top: 0.5rem; font-style: normal;">Bob Moesta · Founder, ReWired Group</p>
+              <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.95rem; color: var(--ink); line-height: 1.4;">"Want to use Jobs-To-Be-Done to build the right product? You're in good hands with Amy Jo."</p>
+              <p style="font-size: 0.78rem; color: var(--mid); margin-top: 0.15rem; font-style: normal;">Bob Moesta · Founder, ReWired Group</p>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
+            <img src="eugenia-kudya.jpeg" alt="Eugenia Kuyda" style="width:5rem;height:5rem;border-radius:8px;object-fit:cover;object-position:center top;flex-shrink:0;filter:grayscale(20%);border:1px solid var(--border);">
+            <div>
+              <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.95rem; color: var(--ink); line-height: 1.4;">"Working with Amy Jo is like having a world-class product designer in your pocket."</p>
+              <p style="font-size: 0.78rem; color: var(--mid); margin-top: 0.15rem; font-style: normal;">Eugenia Kuyda · CEO, WABI</p>
             </div>
           </div>
         </div>
@@ -1295,30 +1309,30 @@
   <div class="container">
     <div class="reveal" style="text-align: center; max-width: 60ch; margin: 0 auto 4rem;">
       <h3>Monthly VIP Guests</h3>
-      <h2>Connect with world-class AI leaders.</h2>
+      <h2>Connect with world-class leaders.</h2>
       <p style="margin-top: 1rem; color: var(--mid);">Every month, a hand-picked industry leader joins the mastermind for an intimate conversation — sharing insights, answering your questions, and expanding your network in ways no conference can replicate.</p>
     </div>
 
     <div class="vip-grid reveal">
       <div class="vip-card">
-        <img src="Doug-Hofstadter-SQUARE-2.png" alt="Doug Hofstadter" class="vip-photo">
+        <img src="amy-bucher.jpeg" alt="Amy Bucher" class="vip-photo">
+        <div class="vip-name">Amy Bucher, Ph.D.</div>
+        <div class="vip-title">CBO · Lirio</div>
+      </div>
+      <div class="vip-card">
+        <img src="gina-bianchini.jpg" alt="Gina Bianchini" class="vip-photo">
+        <div class="vip-name">Gina Bianchini</div>
+        <div class="vip-title">CEO · Mighty Networks</div>
+      </div>
+      <div class="vip-card">
+        <img src="Doug-Hofstadter-SQUARE-2.jpg" alt="Doug Hofstadter" class="vip-photo">
         <div class="vip-name">Doug Hofstadter</div>
         <div class="vip-title">Author · Gödel, Escher, Bach</div>
       </div>
       <div class="vip-card">
-        <img src="Eugenia-Kuyda-.png" alt="Eugenia Kuyda" class="vip-photo">
-        <div class="vip-name">Eugenia Kuyda</div>
-        <div class="vip-title">CEO · WABI</div>
-      </div>
-      <div class="vip-card">
-        <img src="hansohl-kim.jpeg" alt="Hansohl Kim" class="vip-photo">
-        <div class="vip-name">Hansohl Kim</div>
-        <div class="vip-title">Anthropic</div>
-      </div>
-      <div class="vip-card">
-        <img src="bob-moesta.jpeg" alt="Bob Moesta" class="vip-photo">
-        <div class="vip-name">Bob Moesta</div>
-        <div class="vip-title">Founder · ReWired Group</div>
+        <img src="chelsea-howe.jpeg" alt="Chelsea Howe" class="vip-photo">
+        <div class="vip-name">Chelsea Howe</div>
+        <div class="vip-title">CPO · Sunblink</div>
       </div>
       <div class="vip-card">
         <img src="kevin-kelly.jpeg" alt="Kevin Kelly" class="vip-photo">
@@ -1326,24 +1340,39 @@
         <div class="vip-title">Co-founder · WIRED Magazine</div>
       </div>
       <div class="vip-card">
+        <img src="hansohl-kim.jpeg" alt="Hansohl Kim" class="vip-photo">
+        <div class="vip-name">Hansohl Kim</div>
+        <div class="vip-title">Anthropic</div>
+      </div>
+      <div class="vip-card">
+        <img src="eugenia-kudya.jpeg" alt="Eugenia Kuyda" class="vip-photo">
+        <div class="vip-name">Eugenia Kuyda</div>
+        <div class="vip-title">CEO · WABI</div>
+      </div>
+      <div class="vip-card">
+        <img src="bob-moesta.jpeg" alt="Bob Moesta" class="vip-photo">
+        <div class="vip-name">Bob Moesta</div>
+        <div class="vip-title">Founder · ReWired Group</div>
+      </div>
+      <div class="vip-card">
+        <img src="laura-burkhauser.jpg" alt="Laura Burkhauser" class="vip-photo">
+        <div class="vip-name">Laura Burkhauser</div>
+        <div class="vip-title">CEO · Descript</div>
+      </div>
+      <div class="vip-card">
+        <img src="jesse-schell.jpeg" alt="Jesse Schell" class="vip-photo">
+        <div class="vip-name">Jesse Schell</div>
+        <div class="vip-title">CEO · Schell Games</div>
+      </div>
+      <div class="vip-card">
         <img src="garry-tan.jpeg" alt="Garry Tan" class="vip-photo">
         <div class="vip-name">Garry Tan</div>
         <div class="vip-title">CEO · Y Combinator</div>
       </div>
       <div class="vip-card">
-        <img src="gina-bianchini.png" alt="Gina Bianchini" class="vip-photo">
-        <div class="vip-name">Gina Bianchini</div>
-        <div class="vip-title">CEO · Mighty Networks</div>
-      </div>
-      <div class="vip-card">
-        <img src="laura-burkhauser.jpeg" alt="Laura Burkhauser" class="vip-photo">
-        <div class="vip-name">Laura Burkhauser</div>
-        <div class="vip-title">CEO · Descript</div>
-      </div>
-      <div class="vip-card">
-        <img src="amy-bucher.jpeg" alt="Amy Bucher" class="vip-photo">
-        <div class="vip-name">Amy Bucher, Ph.D.</div>
-        <div class="vip-title">CBO · Lirio</div>
+        <img src="kevin-werbach.jpeg" alt="Kevin Werbach" class="vip-photo">
+        <div class="vip-name">Kevin Werbach</div>
+        <div class="vip-title">Director · Wharton Accountable AI Lab</div>
       </div>
     </div>
 
@@ -1355,8 +1384,8 @@
 <section id="how">
   <div class="container">
     <div class="investment-note reveal">
-      <p>Investment: <strong>$10,000/year</strong> for leaders at established companies · <strong>$6,000/year</strong> for self-funded founders & solopreneurs. Monthly and quarterly payment plans available. Every applicant starts with a discovery call — we select for fit, not just credentials.</p>
-      <a href="https://calendly.com/amyjokim/insider" class="btn-primary" target="_blank">Book Your Discovery Call</a>
+      <p>Investment: <strong>$10K/year</strong> for leaders at established companies · <strong>$6K/year</strong> for self-funded founders & solopreneurs. Spots are limited — we select for fit, not just credentials. Apply to get started.</p>
+      <a href="https://form.typeform.com/to/Lt4APDrd" class="btn-primary" target="_blank">Apply Now →</a>
     </div>
   </div>
 </section>
@@ -1386,7 +1415,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>We are currently accepting applications for Q2 2026. Spots are limited and filled by application — book a discovery call to get the process started.</p>
+          <p>We are currently accepting applications for Q2 2026. Spots are limited and filled by application. <a href="https://form.typeform.com/to/Lt4APDrd" target="_blank" style="color:inherit;">Submit your application</a> to get the process started.</p>
         </div>
       </div>
 
@@ -1456,7 +1485,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Yes — we offer monthly and quarterly payment plans for approved Mastermind members. Discuss the options that work best for you during your discovery call.</p>
+          <p>Yes — we offer monthly and quarterly payment plans for approved Mastermind members. Payment options can be discussed after your application is reviewed.</p>
         </div>
       </div>
 
@@ -1481,7 +1510,7 @@
     <h2>Ambitious leaders. Curious minds.<br>Hot products.</h2>
     <p>If you value game design expertise, want honest feedback from talented peers, and care deeply about building products people love — this room was made for you. Spots are limited. Let's find out if it's a fit.</p>
     <div class="closing-actions">
-      <a href="https://calendly.com/amyjokim/insider" class="btn-light" target="_blank">Book Your Discovery Call</a>
+      <a href="https://form.typeform.com/to/Lt4APDrd" class="btn-light" target="_blank">Apply Now →</a>
     </div>
   </div>
 </section>
